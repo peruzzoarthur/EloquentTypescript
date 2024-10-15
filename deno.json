@@ -1,0 +1,11 @@
+{
+  "tasks": {
+    "dev": "deno run --watch $0",
+    "test": "jest"
+  },
+  "imports": {
+    "@benmerckx/suite": "jsr:@benmerckx/suite@^0.3.1",
+    "@std/assert": "jsr:@std/assert@1",
+    "@std/testing": "jsr:@std/testing@^1.0.3"
+  }
+}
