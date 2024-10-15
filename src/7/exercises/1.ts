@@ -7,14 +7,14 @@ import {
 
 type RobotFunction = (
   state: VillageState,
-  memory: string[]
+  memory: string[],
 ) => { direction: string; memory: string[] };
 
 function compareRobots(
   robot1: RobotFunction,
   memory1: string[],
   robot2: RobotFunction,
-  memory2: string[]
+  memory2: string[],
 ) {
   const robot1Turns: number[] = [];
   const robot2Turns: number[] = [];

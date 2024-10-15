@@ -168,15 +168,16 @@ class List {
     this.value = value;
     this.rest = rest;
   }
-  get length() {
+  get length(): number {
     return 1 + (this.rest ? this.rest.length : 0);
   }
-  static fromArray(array: number[]): List {
+  static fromArray(array: number[]): List | null {
     let result = null;
 
     for (let i = array.length - 1; i >= 0; i--) {
       result = new this(array[i], result);
     }
+
     return result;
   }
   [Symbol.iterator]() {
@@ -211,16 +212,20 @@ class LengthList extends List {
     this.lengthValue = super.length;
   }
 
-  get length() {
+  override get length(): number {
     return this.lengthValue;
   }
 }
 
-let list = List.fromArray([1, 2, 3]);
+const list = List.fromArray([1, 2, 3]);
 console.log(list);
-for (let element of list) {
-  console.log(element);
+if (list) {
+  for (const element of list) {
+    console.log(element);
+  }
 }
 
 const lengthLengthArray = LengthList.fromArray([1, 2, 3, 4, 5]);
-console.log(lengthLengthArray.length);
+if (lengthLengthArray) {
+  console.log(lengthLengthArray.length);
+}

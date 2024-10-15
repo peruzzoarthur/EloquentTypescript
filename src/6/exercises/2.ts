@@ -42,6 +42,6 @@ export class Group {
   }
 }
 
-for (const value of Group.from(["a", "b", "c"])) {
+for (const value of Group.from(["a", "b", "c", 4])) {
   console.log(value);
 }

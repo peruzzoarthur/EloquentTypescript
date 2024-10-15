@@ -30,8 +30,8 @@ describe("Group Class", () => {
     const group = new Group();
 
     group.add(2);
-    group.delete(1); // Trying to delete a value that doesn't exist
-    expect(group.has(2)).toBe(true); // Value 2 should still be present
+    group.delete(1);
+    expect(group.has(2)).toBe(true);
   });
 
   Deno.test("should create a group from an iterable", () => {
@@ -44,29 +44,21 @@ describe("Group Class", () => {
     const group = new Group();
 
     group.add(1);
-    group.add(1); // Adding the same value again
+    group.add(1);
     group.add(2);
     expect(group.has(1)).toBe(true);
     expect(group.has(2)).toBe(true);
-    expect(group.group.length).toBe(2); // Accessing the private array
+    expect(group.group.length).toBe(2);
   });
 
   Deno.test(
     "should check has(), add(), and delete() methods work as expected",
     () => {
-      // Test for the scenario provided
       const arrayGroup = Group.from([10, 20]);
 
-      // Check if 10 exists
       expect(arrayGroup.has(10)).toBe(true);
-
-      // Check if 30 exists
       expect(arrayGroup.has(30)).toBe(false);
-
-      // Add 10 (already exists, so no change)
       arrayGroup.add(10);
-
-      // Delete 10 and check again
       arrayGroup.delete(10);
       expect(arrayGroup.has(10)).toBe(false);
     }

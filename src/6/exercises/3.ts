@@ -8,7 +8,7 @@ export class GroupIterator {
     this.group = group;
     this.position = 0;
   }
-  next(): IteratorResult<any> {
+  next(): IteratorResult<unknown> {
     if (this.position >= this.group.group.length) {
       return { done: true, value: undefined };
     } else {
