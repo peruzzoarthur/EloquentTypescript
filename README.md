@@ -2,4 +2,4 @@
 
 #### 👨‍💻 Writing code and solving exercises using Typescript.
 
-#### 🧪 Testing with Jest.
+#### 🦕 Deno 2.0
