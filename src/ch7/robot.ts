@@ -1,13 +1,13 @@
 import { buildGraph, type Graph } from "./buildGraphs.ts";
 import { roads } from "./roads.ts";
 
-const roadGraph = buildGraph(roads);
+export const roadGraph = buildGraph(roads);
 type Parcel = {
   place: string;
   address: string;
 };
 
-type Action = {
+export type Action = {
   direction: string;
   memory: string[];
 };
@@ -98,7 +98,7 @@ export function routeRobot(_state: VillageState, memory: string[]) {
 
 // runRobot(VillageState.random(), routeRobot, []);
 
-function findRoute(graph: Graph, from: string, to: string): string[] {
+export function findRoute(graph: Graph, from: string, to: string): string[] {
   const work: { at: string; route: string[] }[] = [{ at: from, route: [] }];
   for (let i = 0; i < work.length; i++) {
     const { at, route } = work[i];
@@ -127,4 +127,4 @@ export function goalOrientedRobot(
   return { direction: route[0], memory: route.slice(1) };
 }
 
-console.log(runRobot(VillageState.random(), goalOrientedRobot, []));
+// console.log(runRobot(VillageState.random(), goalOrientedRobot, []));

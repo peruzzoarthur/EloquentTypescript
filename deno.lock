@@ -10,7 +10,8 @@
     "jsr:@std/internal@^1.0.4": "1.0.4",
     "jsr:@std/path@^1.0.6": "1.0.6",
     "jsr:@std/testing@*": "1.0.3",
-    "jsr:@std/testing@^1.0.3": "1.0.3"
+    "jsr:@std/testing@^1.0.3": "1.0.3",
+    "npm:create-vite-extra@latest": "2.3.0"
   },
   "jsr": {
     "@benmerckx/suite@0.3.1": {
@@ -53,6 +54,35 @@
         "jsr:@std/internal",
         "jsr:@std/path"
       ]
+    }
+  },
+  "npm": {
+    "create-vite-extra@2.3.0": {
+      "integrity": "sha512-awpjGw/zh5FxhgU5oKMwGxtp/uIApIOLNdzg+rpIB+BiW+JnJHk5g0GB21ZuBE3q/rzyTgo8BTy9wC1x0Apgqw==",
+      "dependencies": [
+        "minimist",
+        "picocolors",
+        "prompts"
+      ]
+    },
+    "kleur@3.0.3": {
+      "integrity": "sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w=="
+    },
+    "minimist@1.2.8": {
+      "integrity": "sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA=="
+    },
+    "picocolors@1.1.0": {
+      "integrity": "sha512-TQ92mBOW0l3LeMeyLV6mzy/kWr8lkd/hp3mTg7wYK7zJhuBStmGMBG0BdeDZS/dZx1IukaX6Bk11zcln25o1Aw=="
+    },
+    "prompts@2.4.2": {
+      "integrity": "sha512-NxNv/kLguCA7p3jE8oL2aEBsrJWgAakBpgmgK6lpPWV+WuOmY6r2/zbAVnP+T8bQlA0nzHXSJSJW0Hq7ylaD2Q==",
+      "dependencies": [
+        "kleur",
+        "sisteransi"
+      ]
+    },
+    "sisteransi@1.0.5": {
+      "integrity": "sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg=="
     }
   },
   "workspace": {

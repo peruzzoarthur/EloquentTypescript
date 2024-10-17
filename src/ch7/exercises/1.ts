@@ -1,20 +1,16 @@
-import {
-  goalOrientedRobot,
-  routeRobot,
-  runRobot,
-  VillageState,
-} from "../robot.ts";
+import { goalOrientedRobot, runRobot, VillageState } from "../robot.ts";
+import { lazyRobot } from "./2.ts";
 
 type RobotFunction = (
   state: VillageState,
-  memory: string[],
+  memory: string[]
 ) => { direction: string; memory: string[] };
 
 function compareRobots(
   robot1: RobotFunction,
   memory1: string[],
   robot2: RobotFunction,
-  memory2: string[],
+  memory2: string[]
 ) {
   const robot1Turns: number[] = [];
   const robot2Turns: number[] = [];
@@ -32,4 +28,4 @@ function compareRobots(
   };
 }
 
-console.log(compareRobots(routeRobot, [], goalOrientedRobot, []));
+console.log(compareRobots(lazyRobot, [], goalOrientedRobot, []));
